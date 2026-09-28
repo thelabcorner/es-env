@@ -1,0 +1,22 @@
+export default {
+  host: 'illustrator',
+  hostTypes: 'Illustrator/2022',
+  additionalTypes: ['./src/globals.d.ts'],
+  entry: 'src/extendscript-entry.ts',
+  outfile: 'dist/ESENV.jsx',
+  target: 'illustrator',
+  requireTarget: false,
+  sourceLint: true,
+  typecheck: true,
+  normalize: true,
+  compatibilityTransforms: ['esbuild'],
+  compatibilityShims: [],
+  allowedMissingBuiltins: [],
+  allowedGlobalPatches: [],
+  prelude: [],
+  footer: [],
+  allowJson: false,
+  allowIncludes: false,
+  live: false,
+  liveLaunch: false
+};

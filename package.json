@@ -1,0 +1,32 @@
+{
+  "name": "esenv",
+  "version": "0.1.0",
+  "description": "Evidence-oriented ExtendScript environment and capability detection for ES-family consumers",
+  "type": "module",
+  "scripts": {
+    "build:node": "tsc -p tsconfig.node.json",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit",
+    "build:jsx": "node ../extendscript-toolchain/bin/estc.mjs build --config extendscript.estc.config.mjs",
+    "test": "npm run build:node && node --test tests/*.test.mjs",
+    "benchmark:node": "npm run build:node && node tests/node-benchmark.mjs",
+    "estc:check": "npm run build:jsx && node ../extendscript-toolchain/bin/estc.mjs check dist/ESENV.jsx --no-target",
+    "estc:live": "npm run build:jsx && node ../extendscript-toolchain/bin/estc.mjs check dist/ESENV.jsx --no-target --live",
+    "live-verify": "node tests/live-verify.mjs",
+    "benchmark:live": "node tests/live-benchmark.mjs",
+    "verify": "npm test && npm run estc:check",
+    "verify:engine": "npm run estc:live && npm run live-verify",
+    "ci:static": "npm run verify",
+    "ci:local": "npm run ci:static && npm run verify:engine"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thelabcorner/es-env.git"
+  }
+}
