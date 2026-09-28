@@ -114,6 +114,7 @@ Also from the same team: **[ArcFit.dev](https://arcfit.dev)**, deterministic arc
 
 - [Why ESENV?](#why-esenv)
 - [Features](#features)
+- [Get the Release](#get-the-release)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [API](#api)
@@ -150,6 +151,32 @@ The final release candidate was parsed and executed on Adobe Illustrator 30.6.0 
 - The persistence test requires a second facade evaluation before it can report observed persistence, so a facade never certifies its own sentinel write.
 - The emitted `dist/ESENV.jsx` is 12,839 bytes and passes ESTC's Acorn ES3 compatibility gate.
 - Node validation passes 11/11 behavioral tests; live validation is separately scoped to Illustrator 30.6.0 / ExtendScript 4.5.6.
+
+---
+
+## Get the Release
+
+<div align="center">
+
+**All production bundles ship as GitHub release assets — this repo holds
+sources. Grab the runnable builds from the
+[Releases page](https://github.com/thelabcorner/es-env/releases).**
+
+[![Latest release](https://img.shields.io/github/v/release/thelabcorner/es-env?display_name=tag)](https://github.com/thelabcorner/es-env/releases/latest)
+[![Release date](https://img.shields.io/github/release-date/thelabcorner/es-env)](https://github.com/thelabcorner/es-env/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/thelabcorner/es-env/total)](https://github.com/thelabcorner/es-env/releases)
+
+</div>
+
+**How it works, in three steps:**
+
+1. Open the [Releases page](https://github.com/thelabcorner/es-env/releases).
+2. Pick the **latest stable** tag.
+3. Download the asset that matches your use case:
+
+| You are... | Take this release | And this asset |
+|---|---|---|
+| Loading ESENV in an Adobe ExtendScript host | Latest stable | `ESENV.jsx` |
 
 ---
 
